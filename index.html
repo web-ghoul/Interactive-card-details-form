@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./font.css">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <title>Frontend Mentor | Interactive card details form</title>
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <section class="cards">
+                <div class="contain">
+                    <picture>
+                        <div class="content">
+                            <div class="circles">
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <div class="text">
+                                <div class="number">
+                                    <span id="one">0 0 0 0</span><span id="two">0 0 0 0</span><span id="three">0 0 0 0</span><span id="four">0 0 0 0</span>
+                                </div>
+                                <div class="info">
+                                    <span class="name">JANE APPLESEED</span>
+                                    <span class="date"><span class="month">00</span>/<span class="year">00</span>
+                                </div>
+                            </div>
+                        </div>
+                        <img src="./images/bg-card-front.png" alt="">
+                    </picture>
+                    <picture>
+                        <img src="./images/bg-card-back.png" alt="">
+                        <span id="cvc">000</span>
+                    </picture>
+                </div>
+            </section>
+
+            <section class="thank hide">
+                <div class="contain">
+                    <picture>
+                        <img src="./images/icon-complete.svg" alt="">
+                    </picture>
+                    <article>
+                        <h3>Thank you!</h3>
+                        <p>We've added your card details</p>
+                    </article>
+                    <div class="btn">
+                        <button>Continue</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="form">
+                <div class="contain">
+                    <form action="">
+                        <div class="name">
+                            <label for="">Cardholder Name</label>
+                            <input type="text" placeholder="e.g. Jane Appleseed">
+                            <span class="error">Enter your name</span>
+                        </div>
+                        <div class="card-number">
+                            <label for="">Card Number</label>
+                            <input type="text" placeholder="e.g. 1234 5678 9123 0000">
+                            <span class="error">Wrong formal , number only</span>
+                        </div>
+                        <div class="flex">
+                            <div class="date">
+                                <label for="">Exp. Date (MM/YY)</label>
+                                <div class="inputs">
+                                    <input type="text" placeholder="MM" class="mon">
+                                    <input type="text" placeholder="YY" class="year">
+                                </div>
+                                <span class="error">Can't be blank</span>
+                            </div>
+                            <div class="cvc">
+                                <label for="">CVC</label>
+                                <input type="text" placeholder="e.g. 123">
+                                <span class="error">Can't be blank</span>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="btn">
+                        <button id="btn" type="button">Confirm</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <script src="./index.js"></script>
+</body>
+
+</html>

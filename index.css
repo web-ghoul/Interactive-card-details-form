@@ -1,0 +1,458 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+main .container {
+    display: grid;
+    justify-content: stretch;
+    align-items: center;
+    grid-template-columns: 32% 65%;
+    width: 100vw;
+    height: 100vh;
+}
+
+section.cards .contain {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    gap: 20px;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("./images/bg-main-desktop.png");
+}
+
+section.cards .contain picture {
+    height: fit-content;
+    width: fit-content;
+    position: relative;
+    left: 140px;
+}
+
+section.cards .contain picture:first-child {
+    top: 50px;
+}
+
+section.cards .contain picture:last-child {
+    top: -50px;
+    left: 240px;
+    position: relative;
+}
+
+section.cards .contain picture .content {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    display: grid;
+    align-items: center;
+    justify-content: stretch;
+    padding: 30px;
+}
+
+section.cards .contain picture .content .circles {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    align-self: flex-start;
+    gap: 20px;
+}
+
+section.cards .contain picture .content .circles span:first-child {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: hsl(0, 0%, 100%);
+}
+
+section.cards .contain picture .content .circles span:last-child {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid hsl(0, 0%, 100%);
+    background-color: transparent;
+}
+
+section.cards .contain picture .content .text {
+    display: grid;
+    align-items: center;
+    align-self: flex-end;
+    justify-content: stretch;
+    gap: 20px;
+    color: hsl(0, 0%, 100%);
+}
+
+section.cards .contain picture .content .text .number {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+section.cards .contain picture .content .text .number span {
+    font-size: 22px;
+    gap: 15px;
+}
+
+section.cards .contain picture .content .text .info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+section.cards .contain picture img {
+    border-radius: 10px;
+}
+
+section.cards .contain picture:last-child>span {
+    position: absolute;
+    top: 48%;
+    transform: translateY(-50%);
+    left: 80%;
+    color: hsl(0, 0%, 100%);
+    letter-spacing: 2px;
+}
+
+section.form .contain {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-left: 200px;
+    position: relative;
+}
+
+section.form .contain form {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+section.form .contain form>div,
+section.form .contain form .flex .date,
+section.form .contain form .flex .cvc {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+section.form .contain form label {
+    font-size: 12px;
+    font-weight: 600;
+    color: hsl(278, 68%, 11%);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+section.form .contain form>div input {
+    outline: none;
+    border: 1px solid #eee;
+    padding: 12px;
+    width: 350px;
+    font-family: 'Space Grotesk', sans-serif;
+    border-radius: 6px;
+    transition: ease-in-out .3s;
+}
+
+section.form .contain form>div input:hover {
+    border-color: hsl(249, 99%, 64%);
+    cursor: pointer;
+}
+
+section.form .contain form>div input::placeholder {
+    color: #ddd;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 16px;
+}
+
+section.form .contain form .flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+section.form .contain form .flex .date .inputs input {
+    width: 80px;
+}
+
+section.form .contain form .flex .cvc {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+section.form .contain form .flex .cvc input {
+    width: 170px;
+}
+
+section.form .contain form span.error {
+    color: hsl(0, 100%, 66%);
+    font-size: 12px;
+    opacity: 0;
+    display: none;
+}
+
+section.form .contain form input.active {
+    border-color: hsl(0, 100%, 66%);
+}
+
+section.form .contain form span.error.active {
+    opacity: 1 !important;
+    display: flex !important;
+}
+
+section.form .contain .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section .contain .btn button {
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: hsl(278, 68%, 11%);
+    color: hsl(0, 0%, 100%);
+    padding: 15px 30px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.8px;
+    cursor: pointer;
+}
+
+section.thank .contain {
+    display: grid;
+    align-items: center;
+    justify-content: stretch;
+    gap: 30px;
+    width: 40%;
+    left: 60%;
+    transform: translateX(-50%);
+    position: relative;
+}
+
+section.thank .contain picture,
+section.thank .contain .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section.thank .contain .btn {
+    justify-content: stretch;
+}
+
+section.thank .contain article {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+}
+
+section.thank .contain article h3 {
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
+section.thank .contain article p {
+    color: hsl(279, 6%, 55%);
+    font-size: 18px;
+}
+
+.hide {
+    display: none !important;
+}
+
+@media (max-width:1200px) {
+    section.form .contain {
+        margin-left: 300px;
+    }
+    section.thank .contain {
+        left: 70%;
+        width: 55%;
+    }
+    section.cards .contain picture {
+        left: 100px;
+    }
+    section.cards .contain picture:last-child {
+        left: 200px;
+    }
+    section.form .contain form>div input {
+        width: 320px;
+    }
+    section.form .contain form .flex .date .inputs input {
+        width: 70px;
+    }
+    section.form .contain form .flex .cvc input {
+        width: 160px;
+    }
+}
+
+@media (max-width:992px) {
+    main .container {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 50px;
+        overflow-x: hidden;
+    }
+    section.cards .contain {
+        height: 60vh;
+        gap: 20px;
+        top: -40px;
+        background-image: url("./images/bg-main-mobile.png");
+    }
+    section.cards .contain picture {
+        left: 30%;
+        transform: translate(-50%, -50%);
+    }
+    section.cards .contain picture:first-child {
+        top: 160%;
+        z-index: 99;
+    }
+    section.cards .contain picture:last-child {
+        top: -10%;
+        left: 70%;
+    }
+    section.form .contain {
+        margin: auto;
+        justify-content: stretch;
+        padding: 40px 80px;
+    }
+    section.form .contain form,
+    section.form .contain form>div {
+        justify-content: stretch;
+    }
+    section.form .contain form .flex .date .inputs {
+        display: flex;
+        gap: 10px;
+    }
+    section.form .contain form>div input,
+    section.form .contain form .flex .date .inputs input,
+    section.form .contain form .flex .cvc input {
+        width: 100%;
+    }
+    section.thank .contain {
+        left: 50%;
+        width: 50%;
+    }
+}
+
+@media (max-width:768px) {
+    main .container {
+        gap: 0;
+    }
+    section.cards .contain {
+        height: 40vh;
+        top: -50px;
+    }
+    section.cards .contain picture {
+        left: 40%;
+        width: 70%;
+    }
+    section.cards .contain picture img {
+        width: 100%;
+    }
+    section.cards .contain picture:first-child {
+        top: 140%;
+        z-index: 99;
+    }
+    section.cards .contain picture:last-child {
+        top: -30%;
+        left: 60%;
+    }
+    section.cards .contain picture .content {
+        padding: 25px;
+    }
+    section.cards .contain picture .content .circles {
+        gap: 16px;
+    }
+    section.cards .contain picture .content .circles span:first-child {
+        width: 25px;
+        height: 25px;
+    }
+    section.cards .contain picture .content .circles span:last-child {
+        width: 12px;
+        height: 12px;
+    }
+    section.cards .contain picture .content .text {
+        gap: 18px;
+    }
+    section.cards .contain picture .content .text .number {
+        gap: 8px;
+    }
+    section.cards .contain picture .content .text .number span {
+        font-size: 12px;
+        gap: 10px;
+    }
+    section.cards .contain picture .content .text .info {
+        font-size: 8px;
+        letter-spacing: 1.5px;
+    }
+    section.cards .contain picture img {
+        border-radius: 8px;
+    }
+    section.cards .contain picture:last-child>span {
+        font-size: 12px;
+        letter-spacing: 1.5px;
+    }
+    section.form .contain {
+        gap: 30px;
+        padding: 20px 40px;
+    }
+    section.form .contain form {
+        gap: 25px;
+    }
+    section.form .contain form>div,
+    section.form .contain form .flex .date,
+    section.form .contain form .flex .cvc {
+        gap: 8px;
+    }
+    section.form .contain form label {
+        font-size: 10px;
+        letter-spacing: 1.5px;
+    }
+    section.form .contain form>div input {
+        padding: 10px;
+        border-radius: 5px;
+    }
+    section.form .contain form>div input::placeholder {
+        font-size: 12px;
+    }
+    section.form .contain form .flex {
+        gap: 18px;
+    }
+    section.form .contain form span.error {
+        font-size: 10px;
+    }
+    section.form .contain .btn button {
+        padding: 12px 25px;
+        border-radius: 5px;
+        font-size: 12px;
+    }
+    section.thank .contain {
+        width: 80%;
+    }
+}
