@@ -19,7 +19,7 @@ main .container {
     display: grid;
     justify-content: stretch;
     align-items: center;
-    grid-template-columns: 32% 65%;
+    grid-template-columns: 35% 65%;
     width: 100vw;
     height: 100vh;
 }
@@ -40,16 +40,16 @@ section.cards .contain picture {
     height: fit-content;
     width: fit-content;
     position: relative;
-    left: 140px;
+    left: 150px;
 }
 
 section.cards .contain picture:first-child {
-    top: 50px;
+    top: 60px;
 }
 
 section.cards .contain picture:last-child {
-    top: -50px;
-    left: 240px;
+    top: -60px;
+    left: 260px;
     position: relative;
 }
 
@@ -165,7 +165,7 @@ section.form .contain form label {
 
 section.form .contain form>div input {
     outline: none;
-    border: 1px solid #eee;
+    border: 1px solid hsl(270, 3%, 87%);
     padding: 12px;
     width: 350px;
     font-family: 'Space Grotesk', sans-serif;
@@ -179,7 +179,7 @@ section.form .contain form>div input:hover {
 }
 
 section.form .contain form>div input::placeholder {
-    color: #ddd;
+    color: hsl(270, 3%, 87%);
     font-family: 'Space Grotesk', sans-serif;
     font-size: 16px;
 }
@@ -233,7 +233,7 @@ section .contain .btn button {
     border: none;
     background-color: hsl(278, 68%, 11%);
     color: hsl(0, 0%, 100%);
-    padding: 15px 30px;
+    padding: 12px 30px;
     border-radius: 6px;
     font-size: 16px;
     font-weight: 500;
